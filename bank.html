@@ -4,8 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Withdraw And Deposit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    
+    <header>
+        <h1 class="text-4xl text-center">Deposit and Withdraw <span class="text-orange-500 font-semibold">Money</span> !!!</h1>
+    </header>
+    <main class="max-w-5xl mx-auto">
+        <section class="mt-10">
+            <div class="grid grid-cols-3 gap-4">
+                <div class="bg-purple-800 text-white p-10 rounded-xl">
+                    <h1 class="text-2xl font-medium">Deposit</h1>
+                    <h2 class="text-3xl font-semibold mt-2">$ <span>00</span></h2>
+                </div>
+                <div class="bg-orange-800 text-white p-10 rounded-xl">
+                    <h1 class="text-2xl font-medium">Withdraw</h1>
+                    <h2 class="text-3xl font-semibold mt-2">$ <span>00</span></h2>
+                </div>
+                <div class="bg-sky-700 text-white p-10 rounded-xl">
+                    <h1 class="text-2xl font-medium">Balance</h1>
+                    <h2 class="text-3xl font-semibold mt-2">$ <span>1240</span></h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-10">
+            <div class="grid grid-cols-2 gap-4 rounded-xl bg-orange-200 p-10">
+                <div>
+                    <input  class="mb-2 px-4 py-2 rounded-lg block w-9/12" type="tel" name="" id="" placeholder="$ Enter your Deposit Amouunt">
+                    <button class="bg-purple-800 text-white font-bold px-4 py-2 rounded-lg hover:bg-purple-600">Deposit</button>
+                </div>
+                <div>
+                    <input  class="mb-2 px-4 py-2 rounded-lg block w-9/12" type="tel" name="" id="" placeholder="$ Enter your Withdraw Amouunt">
+                    <button class="bg-purple-800 text-white font-bold px-4 py-2 rounded-lg hover:bg-purple-600">Withdarw</button>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
