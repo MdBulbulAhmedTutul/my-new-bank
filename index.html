@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My New Bank</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
 </head>
+
 <body>
     <header>
-        <h1 class="text-4xl text-center">Welcome to Your <span class="text-orange-600 font-semibold">Baap Er Bank</span> !!!</h1>
+        <h1 class="text-4xl text-center">Welcome to Your <span class="text-orange-600 font-semibold">Baap Er Bank</span>
+            !!!</h1>
     </header>
     <main class="max-w-5xl mx-auto">
         <section class="mt-10">
             <div class="bg-orange-200 p-10 rounded-lg">
                 <h1 class="text-3xl font-semibold mb-2">Please Login</h1>
-                <input class="mb-2 px-4 py-2 rounded-lg block w-1/2" type="email" name="" id="email-field" placeholder="Enter Your Email Here">
-                <input class="mb-2 px-4 py-2 rounded-lg block w-1/2" type="password" name="" id="password-field" placeholder="Enter Your Password Here">
+                <!-- Email -->
+                <input class="mb-2 px-4 py-2 rounded-lg block w-1/2" type="email" name="" id="email-field"
+                    placeholder="Enter Your Email Here">
+                <!-- Password -->
+                <div class="relative w-1/2 mb-2">
+                    <input type="password" id="passwordInput" placeholder="Enter your password" class="py-2 px-3 pr-10 border rounded-md w-full">
+                    <button onclick="showPassword()" class="absolute top-1/2 right-3 transform -translate-y-1/2 focus:outline-none"><i class="fa-solid fa-eye"></i></button>
+                </div>
+                <!-- button -->
                 <button id="login-btn" class="bg-purple-800 text-white font-bold px-4 py-2 rounded-lg hover:bg-purple-600">Login Now</button>
             </div>
         </section>
     </main>
     <script src="main.js"></script>
 </body>
+
 </html>

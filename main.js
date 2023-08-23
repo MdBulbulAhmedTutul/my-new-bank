@@ -17,3 +17,8 @@ document.getElementById('login-btn').addEventListener('click', function(){
         alert('Invalid User');
     };
 });
+
+// Show Pasword Icon
+function showPassword(){
+    console.log('clicked here');
+}

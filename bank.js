@@ -35,6 +35,17 @@ document.getElementById('withdraw-btn').addEventListener('click', function(){
     const withdrawAmountString = withdrawAmount.value;
     const withdrawAmountNumber = parseFloat(withdrawAmountString);
     withdrawAmount.value = '';
+
+    // Step 4: get the current balance
+    const currentBalance = document.getElementById('curent-balance');
+    const currentBalanceString = currentBalance.innerText;
+    const currentBalanceNumber = parseFloat(currentBalanceString);
+
+    // Step 6: condition current balance and withdraw Balance
+    if(withdrawAmountNumber > currentBalanceNumber){
+        alert('Check Your Current balance');
+        return
+    }
     
     // Step 2: get the current witdraw Money
     const witdrawMoney = document.getElementById('witdraw-money');
@@ -45,17 +56,11 @@ document.getElementById('withdraw-btn').addEventListener('click', function(){
     const newWithdrawMoney = witdrawMoneyNumber + withdrawAmountNumber;
     witdrawMoney.innerText = newWithdrawMoney;
 
-    // Step 4: get the current balance
-    const currentBalance = document.getElementById('curent-balance');
-    const currentBalanceString = currentBalance.innerText;
-    const currentBalanceNumber = parseFloat(currentBalanceString);
+ 
 
     // Step 5: Set The Account Balance brfore withdraw
     const updateCurentBalance = currentBalanceNumber - withdrawAmountNumber;
     currentBalance.innerText = updateCurentBalance;
 
-    // Step 6: condition current balance and withdraw Balance
-    if(withdrawAmountNumber > currentBalanceNumber){
-        alert('Check Your Current balance');
-    }
+    
 });
