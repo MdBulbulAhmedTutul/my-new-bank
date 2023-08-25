@@ -1,5 +1,5 @@
 // Login page setup javascript
-document.getElementById('login-btn').addEventListener('click', function(){
+document.getElementById('login-btn').addEventListener('click', function () {
 
     // Step 1: get the email value
     const emailField = document.getElementById('email-field');
@@ -10,15 +10,21 @@ document.getElementById('login-btn').addEventListener('click', function(){
     const password = passwordField.value;
 
     // Step 3: got the (bank.html) condition
-    if(email === 'bulbulahmedtutul998@gmail.com' && password === 'bulbul@ahmed998'){
+    if (email === 'bulbulahmedtutul998@gmail.com' && password === 'bulbul@ahmed998') {
         window.location.href = 'bank.html';
     }
-    else{
+    else {
         alert('Invalid User');
     };
 });
 
 // Show Pasword Icon
-function showPassword(){
-    console.log('clicked here');
+function showPassword() {
+    const passwordInput = document.getElementById('password-field');
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'Text';
+    }
+    else {
+        passwordInput.type = 'password';
+    }
 }
